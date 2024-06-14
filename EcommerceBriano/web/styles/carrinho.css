@@ -1,3 +1,7 @@
+main {
+    display: flex;
+    flex-direction: row;
+}
 h1 {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -5,11 +9,9 @@ h1 {
     display: grid;
     font-family: 'Lexend', sans-serif;
 }
-.row{
-    width: 900px;
-    background-color: #fff;
-}
-.containercar{
+
+
+.containercar {
     padding: 0;
     width: 620px;
     height: 500px;
@@ -18,134 +20,41 @@ h1 {
     overflow: scroll;
     background-color: #ffffff;
     align-content: flex-start;
+    margin-top: 70px;
 }
-.content{
-    width: 1100px;
-    display: grid;
-    grid-template-areas: 
-    "text preco";
-    grid-template-columns: 100px 180px;
-    border-radius: 15px;
+.pix{
+    width: 300px !important; 
+    height: 300px !important;
+    margin-top: 20px; 
+    margin-right: 60px;
 }
-.content .text{
-    grid-area: text;
+.shadow-sm {
+    box-shadow: 12px 1rem 0.25rem rgba(0, 0, 0, 0.075) !important;
 }
-.content #preco{
-    grid-area: preco;
-    font-size: 28px;
+.nav-fill>.nav-link, .nav-fill .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+    background-color: white;
 }
-.containercar .produto {
-    width: 600px;
-    height: 150px;
-    display: grid;
-    grid-template-areas:
-        "img h2 . lixo comp"
-        "img p1 p2 lixo comp";
-    grid-template-rows: 10px 90px;
-    justify-items: start;
-    border-bottom: 1px solid rgb(43, 43, 43);
-    align-items: center;
-    align-content: center;
-    justify-content: space-between;
-}
-.containercar img{
-    width: 130px;
-    height: 130px;
-    margin-left: 20px;
-    grid-area: img;
+.nav-pills .nav-link.active {
+    color: #ffffff !important;
+    background-color: #006bc2;
 }
 
+.rounded-lg {
+    border-radius: 1rem;
+  }
   
-.containercar .produto h2{
-    margin: 0;
-    font-size: 35px;
-    margin-top: 20px;
-    margin-left: 20px;
-    grid-area: h2;
-
-}
-.containercar .produto p{
-
-    margin-bottom: 0;
-    font-size: 16px;
-    color: #000000;
-    height: 50px;
-    margin-left: 20px;
-}
-.containercar .produto #p1{
-    color: #4ADF4A;
-    grid-area: p1;
-
-}
-.preco{
-    color: #4ADF4A;
-}
-
-.containercar .produto #p2{
-    color: #000000;
-
-}
-.containercar button{
-    width: 30px;
-    height: 30px;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-}
-.containercar button i{
-    width: 18px;
-    height: 19px;
+  .nav-pills .nav-link {
+    color: #555;
+  }
+  
+  .nav-pills .nav-link.active {
     color: #fff;
-}
-.containercar .lixo{
-    grid-area: lixo;
-    margin-right: 5px;
-    margin-left: 30px;
-    border: none;
-    border-radius: 5px;
-    background-color: #E41E1E;
-    cursor: pointer;
-}
-.containercar .comprar{
-    grid-area: comp;
-    border: none;
-    border-radius:15px;
-    background-color: #1EE449;
-    cursor: pointer;
-}
-.TextExcluir{
-    grid-area: lixo;
-    margin-left: 50px;
-    margin-top: 25px;
+  }
+  .row {
 
-}
-.finalizarCompra {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 500px;
-    justify-content: flex-end;
-}
-.final{
-    border-radius: 15px;
-    width: 200px;
-    height: 40px;
-    color: white;
-    background-color: rgb(0, 143, 95);
-    margin-top: 30px;
-    border-color: #000000;
-    cursor: pointer;
-    margin-left: 10px;
-}
-.finalizarCompra .fa-solid{
-    margin-left: 10px;
-}
-.finalizarCompra:hover{
-    transition: all 0.3s ease-in-out 0.1s;
+    background-color: #fff;
+    margin-right:2% ;
 }
 
-.finalizarCompra :hover{
-    background-color: #ffffff;
-    color: #4adf4a;
-    border: 2px solid #4adf4a;
-    
-}

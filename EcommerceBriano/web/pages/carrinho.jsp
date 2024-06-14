@@ -61,7 +61,28 @@
                     <li class="nav-item">
                       <a class="nav-link" href="./CadastroProd">Cadastro</a>
                     </li>
-                    <style> .nav-link { position: relative; transition: border-bottom 0.4s; } .nav-link::before { content: ""; position: absolute; bottom: 0; left: 100%; width: 0; height: 2px; background-color: white; transition: width 0.6s; } .nav-link:hover::before { width: 100%; left: 0; } </style>
+                    <style>
+                      .nav-link {
+                        position: relative;
+                        transition: border-bottom 0.4s;
+                      }
+
+                      .nav-link::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 100%;
+                        width: 0;
+                        height: 2px;
+                        background-color: white;
+                        transition: width 0.6s;
+                      }
+
+                      .nav-link:hover::before {
+                        width: 100%;
+                        left: 0;
+                      }
+                    </style>
                   </ul>
                   <!-- Left links -->
                 </div>
@@ -71,8 +92,7 @@
                 <div class="dropdown">
                   <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                     id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
-                    <img src="assets/perfil.png" class="rounded-circle" height="40"
-                      alt="Black and White Portrait of a Man" loading="lazy" />
+                    <i class="fa-solid fa-circle-user"></i>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                     <li>
@@ -82,7 +102,7 @@
                       <a class="dropdown-item" href="#">Configurações <i class="fa-solid fa-gear"></i></a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Sair <i class="fa-solid fa-right-from-bracket"></i></a>
+                      <a class="dropdown-item" href="./Login">Sair <i class="fa-solid fa-right-from-bracket"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -93,14 +113,8 @@
             </nav>
           </header>
           <main>
-            <div class="car">
-              <h1>Carrinho </h1>
-              <label for="cep" class="form-label">CEP</label>
-              <input type="text" name="cep" id="cep" class="form-control" placeholder="Digite seu CEP" />
-              <button type="button" class="btn btn-secondary mt-2" onclick="calcularFrete()">Calcular Frete</button>
-            </div>
+
             <div class="containercar">
-              <!-- ForEach cod Luan -->
               <c:forEach items="${carrinhos}" var="carrinho">
                 <div id="${carrinho.idProdutos}" class="produto">
                   <img src="data:image/png;base64,${carrinho.imagemBase64}" alt="${carrinho.nomeCarrinho}">
@@ -113,18 +127,133 @@
                   </div>
                 </div>
               </c:forEach>
-               <!-- ForEach cod Luan -->
             </div>
-            <div class="finalizarCompra"><button class="final">Finalizar compra </button>
-              <button class="final">Voltar as compras
-                <link rel="stylesheet" href="redirect.jsp">
-              </button>
-            </div>
-            </div>
+            <div class="container py-5">
 
+
+
+
+              <div class="row">
+                <div class="col-lg-7 mx-auto">
+                  <div class="bg-white rounded-lg shadow-sm p-5">
+                    <!-- Credit card form tabs -->
+                    <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                      <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                          <i class="fa fa-credit-card"></i>
+                          Cartão de Credito
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link rounded-pill">
+                          <i class="fa fa-paypal"></i>
+                          Pix
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
+                          <i class="fa fa-university"></i>
+                          Tranferencia Bancaria
+                        </a>
+                      </li>
+                    </ul>
+                    <!-- End -->
+
+
+                    <!-- Credit card form content -->
+                    <div class="tab-content">
+
+                      <!-- credit card info-->
+                      <div id="nav-tab-card" class="tab-pane fade show active">
+                        <p class="alert alert-success">Revise seus dados antes do Pagamento</p>
+                        <form role="form">
+                          <div class="form-group">
+                            <label for="username">Nome do Cartão</label>
+                            <input type="text" name="username" placeholder="Jason Doe" required class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <label for="cardNumber">Número do Cartão</label>
+                            <div class="input-group">
+                              <input type="text" name="cardNumber" placeholder="Your card number" class="form-control"
+                                required>
+                              <div class="input-group-append">
+                                <span class="input-group-text text-muted">
+                                  <i class="fa fa-cc-visa mx-1"></i>
+                                  <i class="fa fa-cc-amex mx-1"></i>
+                                  <i class="fa fa-cc-mastercard mx-1"></i>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-sm-8">
+                              <div class="form-group">
+                                <label><span class="hidden-xs">Validade</span></label>
+                                <div class="input-group">
+                                  <input type="number" placeholder="MM" name="" class="form-control" required>
+                                  <input type="number" placeholder="YY" name="" class="form-control" required>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-4">
+                              <div class="form-group mb-4">
+                                <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+                                  <i class="fa fa-question-circle"></i>
+                                </label>
+                                <input type="text" required class="form-control">
+                              </div>
+                            </div>
+
+
+
+                          </div>
+                          <button type="button" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm">
+                            Confirm </button>
+                        </form>
+                      </div>
+                      <!-- End -->
+
+                      <!-- Paypal info -->
+                      <div id="nav-tab-paypal" class="tab-pane fade">
+                        <p>Faça o pagamento online sem sair de sua casa com o Pix</p>
+                        <p>
+                          <div class="inputbox"> <img class="pix" src="assets/pix.png" alt=""></div>
+                        </p>
+                        <p class="text-muted">Apenas escaneie o codigo a cima 
+                        </p>
+                      </div>
+                      <!-- End -->
+
+                      <!-- bank transfer info -->
+                      <div id="nav-tab-bank" class="tab-pane fade">
+                        <h6>Bank account details</h6>
+                        <dl>
+                          <dt>Bank</dt>
+                          <dd> THE WORLD BANK</dd>
+                        </dl>
+                        <dl>
+                          <dt>Account number</dt>
+                          <dd>7775877975</dd>
+                        </dl>
+                        <dl>
+                          <dt>IBAN</dt>
+                          <dd>CZ7775877975656</dd>
+                        </dl>
+                        <p class="text-muted">Apenas escaneie o codigo a cima 
+                        </p>
+                      </div>
+                      <!-- End -->
+                    </div>
+                    <!-- End -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </main>
           <footer>
+           
             <div class="redes">
               <a href="https://www.instagram.com/coe_briano?igsh=c2JweXZ6NHVnODRt"
                 class="btn btn-outline-succes my-2 my-sm-1" type="submit"><i class="fa-brands fa-instagram"></i></a>
@@ -149,6 +278,7 @@
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
+          <script src="js.car.js"></script>
           <!-- MDB -->
           <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.0/mdb.umd.min.js"></script>

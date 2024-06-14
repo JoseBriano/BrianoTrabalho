@@ -5,9 +5,17 @@
     border-radius: 15px;
     margin-left: 15px;
 }
-.navbar{
-    height: 100px;
-    background-color:#3e82ff !important ;
+.bg-body-tertiary {
+  --mdb-bg-opacity: 1;
+  background-color: #001f58 !important;
+}
+.navbar {
+  height: 140px;
+}
+.fa-circle-user:before{
+  color: white;
+  font-size: 25px;
+  background-color: transparent;
 }
 h2{
     margin-left: 50px;
@@ -15,6 +23,10 @@ h2{
 .navbar-light .navbar-nav .nav-link {
     color: #fff;
     font-size: large;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+  font-size: large;
 }
 .dropdown-item {
     display: block;
@@ -30,6 +42,13 @@ h2{
     justify-content: space-around;
     border: 0;
     border-radius: var(--mdb-dropdown-item-border-radius, 0);
+}
+element.style {
+  position: absolute;
+  will-change: transform;
+  top: 0px;
+  left: 0px;
+  transform: translate3d(15px, 36px, 0px);
 }
 body {  
     font-family: Arial, sans-serif;
@@ -88,9 +107,10 @@ body {
   }
 
   #desc {
-    color: #666;
+    color: #b1b1b1;
     margin-bottom: 20px;
     font-family: 'Lexend', sans-serif;
+    margin: 0;
   }
 
   .dropdown {
@@ -101,6 +121,8 @@ body {
     font-size: 18px;
     color: #333;
     font-family: 'Lexend', sans-serif;
+    background-color: #ffffff;
+ 
   }
   .dropdown-toggle {
     border: none;
@@ -138,28 +160,35 @@ body {
     background-color: #00b327;
   }
   .btn-comprar:hover {
-    background-color: #00b336; /* darker blue color on hover */
+    background-color: #00b336;
     color: white;
   }
-  .btn-outline-succes{
-    background-color: transparent;
-    color: #ffffff;
-    height: 30px;
-    margin-left: 10px;
-    margin-right: 5px;
-}
-  .redes{
+  .redes {
     margin-top: 10%;
     border-bottom: 40px;
+    color: #eeeeee;
 }
-footer{
+.bg-body-tertiary {
+    --mdb-bg-opacity: 1;
+    background-color: #001f58 !important;
+}
+.row {
+    --mdb-gutter-x: 1.5rem;
+    --mdb-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--mdb-gutter-y));
+    margin-right: calc(-0.5* var(--mdb-gutter-x));
+    margin-left: calc(-0.5* var(--mdb-gutter-x));
+    justify-content: space-between;
+}
+  footer {
     width: 100%;
     height: 20%;
     margin: 0;
     padding: 0;
     display: grid;
-    background-color: #253759;
-    color: rgb(248, 248, 248);  
+    color: rgb(255, 255, 255);
     background-size: 100% 100%;
     justify-content: space-around;
     justify-items: center;

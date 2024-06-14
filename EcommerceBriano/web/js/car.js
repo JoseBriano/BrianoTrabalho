@@ -51,3 +51,7 @@ document.querySelectorAll('.btn-comprar').forEach(btn => {
         });
     });
 });
+
+$(function() {
+    $('[data-toggle="tooltip"]').tooltip()
+  })

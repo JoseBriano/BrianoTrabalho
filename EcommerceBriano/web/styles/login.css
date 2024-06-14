@@ -35,7 +35,7 @@ body{
     left: -50%;
     width: 100%;
     height: 100%;
-    background-color: #3771e0;
+    background-color: #5a2ec0;
     z-index: 6;
     transform: translateX(100%);
     transition: 1s ease-in-out;
@@ -83,7 +83,7 @@ form.sign-up-form {
     height: 50px;
     background: #f0f0f0;
     margin: 10px 0;
-    border: 2px solid #0e0091;
+    border: 2px solid #000000;
     border-radius: 50px;
     display: flex;
     align-items: center;
@@ -91,7 +91,7 @@ form.sign-up-form {
 .input-field i {
     flex: 1;
     text-align: center;
-    color: #0e0091;
+    color: #686868;
     font-size: 18px;
 }
 .input-field input {
@@ -109,7 +109,7 @@ form.sign-up-form {
     height: 50px;
     border: none;
     border-radius: 50px;
-    background: #004bd7;
+    background: #3b007e;
     color: #ffffff;
     font-weight: 600;
     margin: 10px 0;

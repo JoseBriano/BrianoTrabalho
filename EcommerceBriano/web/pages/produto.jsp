@@ -65,20 +65,38 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./CadastroProd">Cadastro</a>
                 </li>
+                <style>
+                  .nav-link {
+                    position: relative;
+                    transition: border-bottom 0.4s;
+                  }
+
+                  .nav-link::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 100%;
+                    width: 0;
+                    height: 2px;
+                    background-color: white;
+                    transition: width 0.6s;
+                  }
+
+                  .nav-link:hover::before {
+                    width: 100%;
+                    left: 0;
+                  }
+                </style>
               </ul>
               <!-- Left links -->
             </div>
-            <!-- Icon -->
-            <a class="link-secondary me-3" href="./CarrinhoController">
-              <i class="fas fa-shopping-cart"></i>
-            </a>
+
             <!-- Collapsible wrapper -->
             <!-- Avatar -->
             <div class="dropdown">
-              <a data-mdb-dropdown-init class="dropdown-toggleP d-flex align-items-center hidden-arrow" href="#"
+              <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                 id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
-                <img src="assets/perfil.png" class="rounded-circle" height="40" alt="Black and White Portrait of a Man"
-                  loading="lazy" />
+                <i class="fa-solid fa-circle-user"></i>
               </a>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                 <li>
@@ -88,7 +106,7 @@
                   <a class="dropdown-item" href="#">Configurações <i class="fa-solid fa-gear"></i></a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Sair <i class="fa-solid fa-right-from-bracket"></i></a>
+                  <a class="dropdown-item" href="./Login">Sair <i class="fa-solid fa-right-from-bracket"></i></a>
                 </li>
               </ul>
             </div>
@@ -113,7 +131,11 @@
                     Selecione o tamanho:
                   </button>
                   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <p class="dropdown-item" id="tamanho">${produtos.tamanho}</p>
+                    <p class="dropdown-item" id="tamanho">38</p>
+                    <p class="dropdown-item" id="tamanho">39</p>
+                    <p class="dropdown-item" id="tamanho">40</p>
+                    <p class="dropdown-item" id="tamanho">41</p>
+                    <p class="dropdown-item" id="tamanho">42</p>
                   </div>
                 </div>
 
@@ -149,22 +171,6 @@
       </form>
       </div>
       </main>
-      <footer>
-        <div class="redes">
-          <a href="https://www.instagram.com/coe_briano?igsh=c2JweXZ6NHVnODRt"
-            class="btn btn-outline-succes my-2 my-sm-1" type="submit"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=100012932593794&locale=pt_BR"
-            class="btn btn-outline-succes my-2 my-sm-1" type="submit"><i class="fa-brands fa-facebook"></i></a>
-          <a href="https://wa.me/5543996898525" class="btn btn-outline-succes my-2 my-sm-1" type="submit"><i
-              class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://www.linkedin.com/in/josé-briano-3a363225a" class="btn btn-outline-succes my-2 my-sm-1"
-            type="submit"><i class="fa-brands fa-linkedin"></i></a>
-
-        </div>
-        &copy; Todos os direitos reservados a Briano
-      </footer>
-
-
       <script src="https://kit.fontawesome.com/1634f6c9c7.js" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
