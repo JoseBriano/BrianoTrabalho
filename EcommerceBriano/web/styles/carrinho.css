@@ -1,6 +1,7 @@
 main {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 h1 {
     margin-top: 30px;
@@ -10,18 +11,6 @@ h1 {
     font-family: 'Lexend', sans-serif;
 }
 
-
-.containercar {
-    padding: 0;
-    width: 620px;
-    height: 500px;
-    margin-left: 90px;
-    border: 2px solid rgb(190, 190, 190);
-    overflow: scroll;
-    background-color: #ffffff;
-    align-content: flex-start;
-    margin-top: 70px;
-}
 .pix{
     width: 300px !important; 
     height: 300px !important;
@@ -40,11 +29,20 @@ h1 {
     color: #ffffff !important;
     background-color: #006bc2;
 }
-
+.py-5{
+    background-color: white;
+    width: 100%;
+}
+.bg-body-tertiary1 {
+    --mdb-bg-opacity: 1;
+     background-color: #001f58 !important; 
+     color: #ffffff;
+}
 .rounded-lg {
     border-radius: 1rem;
-  }
-  
+    background-color: rgb(255, 255, 255) !important;
+    
+}
   .nav-pills .nav-link {
     color: #555;
   }
@@ -52,9 +50,8 @@ h1 {
   .nav-pills .nav-link.active {
     color: #fff;
   }
-  .row {
+  .rowPag {
 
     background-color: #fff;
-    margin-right:2% ;
-}
 
+}

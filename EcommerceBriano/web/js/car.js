@@ -41,7 +41,7 @@ document.querySelectorAll('.btn-comprar').forEach(btn => {
             if (!response.ok) {
                 throw new Error('Ocorreu um erro ao enviar o formulário.');
             }else{
-                alert('Produto adicionado ao carrinho!');
+                
                 window.location.href = 'redirect.jsp';
             }
            
@@ -52,6 +52,3 @@ document.querySelectorAll('.btn-comprar').forEach(btn => {
     });
 });
 
-$(function() {
-    $('[data-toggle="tooltip"]').tooltip()
-  })

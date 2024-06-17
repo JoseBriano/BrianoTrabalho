@@ -152,8 +152,27 @@
                   data-descricao="${produtos.descricao}" data-nome="${produtos.nome}" data-preco="${produtos.preco}"
                   data-imagem="${produtos.imagemBase64}" data-quantidade=1 id="comprar"
                   data-tamanho="${produtos.tamanho}">
-                  <i class="fa-solid fa-basket-shopping"></i> Comprar
+                  <a href="#myModal" class="trigger-btn" data-toggle="modal">comprar</a>
                 </button>
+                <div id="myModal" class="modal fade">
+                  <div class="modal-dialog modal-confirm">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <div class="icon-box">
+                          <i class="fa-solid fa-check" style="color: #ffffff;"></i>
+                        </div>				
+                        <h4 class="modal-title">Sucesso!</h4>	
+                      </div>
+                      <div class="modal-body">
+                        <p class="text-center">Seu produto foi adicionado ao carrinho.</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>     
+                </body>
               </div>
 
             </div>

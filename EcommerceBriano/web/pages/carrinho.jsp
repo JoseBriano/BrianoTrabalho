@@ -113,147 +113,161 @@
             </nav>
           </header>
           <main>
+            <section class="h-100 h-custom" style="background-color: #d2c9ff;">
+              <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                  <div class="col-12">
+                    <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                      <div class="card-body p-0">
+                        <div class="row g-0">
+                          <div class="col-lg-8">
+                            <div class="p-5">
+                              <div class="d-flex justify-content-between align-items-center mb-5">
+                                <h1 class="fw-bold mb-0">Carrinho</h1>
+                              </div>
+                              <hr class="my-4">
 
-            <div class="containercar">
-              <c:forEach items="${carrinhos}" var="carrinho">
-                <div id="${carrinho.idProdutos}" class="produto">
-                  <img src="data:image/png;base64,${carrinho.imagemBase64}" alt="${carrinho.nomeCarrinho}">
-                  <h2>${carrinho.nomeCarrinho}</h2>
-                  <p id="p1" class="preco">R$ ${carrinho.precoCarrinho}</p>
-                  <button type="submit" class="lixo" id="excluir-${carrinho.idProdutos}"><i
-                      class="fa-solid fa-trash"></i></button>
-                  <div class="TextExcluir">
-                    <p>Excluir</p>
+                  <div class="row mb-4 d-flex justify-content-between align-items-center">
+                    <div class="col-md-2 col-lg-2 col-xl-2">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
+                        class="img-fluid rounded-3" alt="Cotton T-shirt">
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-3">
+                      <h6 class="text-muted">Shirt</h6>
+                      <h6 class="mb-0">Cotton T-shirt</h6>
+                    </div>
+                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                        <i class="fas fa-minus"></i>
+                      </button>
+
+                      <input id="form1" min="0" name="quantity" value="1" type="number"
+                        class="form-control form-control-sm" />
+
+                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                        <i class="fas fa-plus"></i>
+                      </button>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                      <h6 class="mb-0">€ 44.00</h6>
+                    </div>
+                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                      <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                    </div>
+                  </div>
+                              <hr class="my-4">
+                              <div class="pt-5">
+                                <h6 class="mb-0"><a href="redirect.jsp" class="text-body"><i
+                                      class="fas fa-long-arrow-alt-left me-2"></i>Voltar as Compras</a></h6>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 bg-body-tertiary">
+                            <div class="p-5">
+                              <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                              <hr class="my-4">
+                              <div class="d-flex justify-content-between mb-4">
+                                <h5 class="text-uppercase">itens</h5>
+                                <h5></h5>
+                              </div>
+                              <hr class="my-4">
+                              <div class="d-flex justify-content-between mb-5">
+                                <h5 class="text-uppercase">Total:</h5>
+                                <h5></h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </c:forEach>
-            </div>
-            <div class="container py-5">
-
-
-
-
-              <div class="row">
-                <div class="col-lg-7 mx-auto">
-                  <div class="bg-white rounded-lg shadow-sm p-5">
-                    <!-- Credit card form tabs -->
-                    <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
-                      <li class="nav-item">
-                        <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
-                          <i class="fa fa-credit-card"></i>
-                          Cartão de Credito
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link rounded-pill">
-                          <i class="fa fa-paypal"></i>
-                          Pix
-                        </a>
-                      </li>
-                      <li class="nav-item">
-                        <a data-toggle="pill" href="#nav-tab-bank" class="nav-link rounded-pill">
-                          <i class="fa fa-university"></i>
-                          Tranferencia Bancaria
-                        </a>
-                      </li>
-                    </ul>
-                    <!-- End -->
-
-
-                    <!-- Credit card form content -->
-                    <div class="tab-content">
-
-                      <!-- credit card info-->
-                      <div id="nav-tab-card" class="tab-pane fade show active">
-                        <p class="alert alert-success">Revise seus dados antes do Pagamento</p>
-                        <form role="form">
-                          <div class="form-group">
-                            <label for="username">Nome do Cartão</label>
-                            <input type="text" name="username" placeholder="Jason Doe" required class="form-control">
+              </div>
+            </section>
+            <div class="rowPag">
+              <div class="col-lg-7 mx-auto">
+                <div class="bg-white rounded-lg shadow-sm p-5">
+                  <!-- Credit card form tabs -->
+                  <ul role="tablist" class="nav bg-light nav-pills rounded-pill nav-fill mb-3">
+                    <li class="nav-item">
+                      <a data-toggle="pill" href="#nav-tab-card" class="nav-link active rounded-pill">
+                        <i class="fa fa-credit-card"></i>
+                        Cartão de Credito
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a data-toggle="pill" href="#nav-tab-paypal" class="nav-link rounded-pill">
+                        <i class="fa fa-paypal"></i>
+                        Pix
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- End -->
+                  <!-- Crdit card form content -->
+                  <div class="tab-content">
+                    <!-- credit card info-->
+                    <div id="nav-tab-card" class="tab-pane fade show active">
+                      <p class="alert alert-success">Revise seus dados antes do Pagamento</p>
+                      <form role="form">
+                        <div class="form-group">
+                          <label for="username">Nome do Cartão</label>
+                          <input type="text" name="username" placeholder="ex: Ronaldo" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label for="cardNumber">Número do Cartão</label>
+                          <div class="input-group">
+                            <input type="text" name="cardNumber" placeholder="ex:1111 1111 1111 1111"
+                              class="form-control" required>
+                            <div class="input-group-append">
+                              <span class="input-group-text text-muted">
+                                <i class="fa fa-cc-visa mx-1"></i>
+                                <i class="fa fa-cc-mastercard mx-1"></i>
+                              </span>
+                            </div>
                           </div>
-                          <div class="form-group">
-                            <label for="cardNumber">Número do Cartão</label>
-                            <div class="input-group">
-                              <input type="text" name="cardNumber" placeholder="Your card number" class="form-control"
-                                required>
-                              <div class="input-group-append">
-                                <span class="input-group-text text-muted">
-                                  <i class="fa fa-cc-visa mx-1"></i>
-                                  <i class="fa fa-cc-amex mx-1"></i>
-                                  <i class="fa fa-cc-mastercard mx-1"></i>
-                                </span>
+                        </div>
+                        <div class="row">
+                          <div class="col-sm-8">
+                            <div class="form-group">
+                              <label><span class="hidden-xs">Validade</span></label>
+                              <div class="input-group">
+                                <input type="number" placeholder="MM" name="" class="form-control" required>
+                                <input type="number" placeholder="AA" name="" class="form-control" required>
                               </div>
                             </div>
                           </div>
-                          <div class="row">
-                            <div class="col-sm-8">
-                              <div class="form-group">
-                                <label><span class="hidden-xs">Validade</span></label>
-                                <div class="input-group">
-                                  <input type="number" placeholder="MM" name="" class="form-control" required>
-                                  <input type="number" placeholder="YY" name="" class="form-control" required>
-                                </div>
-                              </div>
+                          <div class="col-sm-4">
+                            <div class="form-group mb-4">
+                              <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
+                              </label>
+                              <input type="text" required class="form-control">
                             </div>
-                            <div class="col-sm-4">
-                              <div class="form-group mb-4">
-                                <label data-toggle="tooltip" title="Three-digits code on the back of your card">CVV
-                                  <i class="fa fa-question-circle"></i>
-                                </label>
-                                <input type="text" required class="form-control">
-                              </div>
-                            </div>
-
-
-
                           </div>
-                          <button type="button" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm">
-                            Confirm </button>
-                        </form>
-                      </div>
-                      <!-- End -->
-
-                      <!-- Paypal info -->
-                      <div id="nav-tab-paypal" class="tab-pane fade">
-                        <p>Faça o pagamento online sem sair de sua casa com o Pix</p>
-                        <p>
-                          <div class="inputbox"> <img class="pix" src="assets/pix.png" alt=""></div>
-                        </p>
-                        <p class="text-muted">Apenas escaneie o codigo a cima 
-                        </p>
-                      </div>
-                      <!-- End -->
-
-                      <!-- bank transfer info -->
-                      <div id="nav-tab-bank" class="tab-pane fade">
-                        <h6>Bank account details</h6>
-                        <dl>
-                          <dt>Bank</dt>
-                          <dd> THE WORLD BANK</dd>
-                        </dl>
-                        <dl>
-                          <dt>Account number</dt>
-                          <dd>7775877975</dd>
-                        </dl>
-                        <dl>
-                          <dt>IBAN</dt>
-                          <dd>CZ7775877975656</dd>
-                        </dl>
-                        <p class="text-muted">Apenas escaneie o codigo a cima 
-                        </p>
-                      </div>
-                      <!-- End -->
+                        </div>
+                        <button type="button" class="subscribe btn btn-primary btn-block rounded-pill shadow-sm">
+                          Confirm </button>
+                      </form>
                     </div>
                     <!-- End -->
-
+                    <!-- Paypal info -->
+                    <div id="nav-tab-paypal" class="tab-pane fade">
+                      <p>Faça o pagamento online sem sair de sua casa com o Pix</p>
+                      <p>
+                      <div class="inputbox"> <img class="pix" src="assets/pix.png" alt=""></div>
+                      </p>
+                      <p class="text-muted">Apenas escaneie o codigo a cima
+                      </p>
+                    </div>
+                    <!-- End -->
                   </div>
                 </div>
               </div>
             </div>
-
           </main>
           <footer>
-           
             <div class="redes">
               <a href="https://www.instagram.com/coe_briano?igsh=c2JweXZ6NHVnODRt"
                 class="btn btn-outline-succes my-2 my-sm-1" type="submit"><i class="fa-brands fa-instagram"></i></a>
