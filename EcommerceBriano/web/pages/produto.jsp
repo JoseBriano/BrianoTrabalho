@@ -103,9 +103,6 @@
                   <a class="dropdown-item" href="#">Seu perfil <i class="fa-solid fa-user"></i></a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">Configurações <i class="fa-solid fa-gear"></i></a>
-                </li>
-                <li>
                   <a class="dropdown-item" href="./Login">Sair <i class="fa-solid fa-right-from-bracket"></i></a>
                 </li>
               </ul>
@@ -154,6 +151,7 @@
                   data-tamanho="${produtos.tamanho}">
                   <a href="#myModal" class="trigger-btn" data-toggle="modal">comprar</a>
                 </button>
+                
                 <div id="myModal" class="modal fade">
                   <div class="modal-dialog modal-confirm">
                     <div class="modal-content">

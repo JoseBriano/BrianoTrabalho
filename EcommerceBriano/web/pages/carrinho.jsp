@@ -99,9 +99,6 @@
                       <a class="dropdown-item" href="#">Seu perfil <i class="fa-solid fa-user"></i></a>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">Configurações <i class="fa-solid fa-gear"></i></a>
-                    </li>
-                    <li>
                       <a class="dropdown-item" href="./Login">Sair <i class="fa-solid fa-right-from-bracket"></i></a>
                     </li>
                   </ul>
