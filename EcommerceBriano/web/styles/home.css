@@ -22,7 +22,10 @@ main {
     height: 140px;
     background-color: #3e82ff !important;
 }
-
+#carouselExampleControls{
+    background-color: #000000;
+    width: 100%;
+}
 .navbar-light .navbar-nav .nav-link {
     color: #fff;
     font-size: large;
@@ -145,7 +148,19 @@ img {
     margin: 0;
     padding: 0;
 }
-
+.btn-primary {
+    --mdb-btn-bg: #3b71ca;
+    --mdb-btn-color: #fff;
+    --mdb-btn-box-shadow: 0 4px 9px -4px #386bc0;
+    --mdb-btn-hover-bg: #386bc0;
+    --mdb-btn-hover-color: #fff;
+    --mdb-btn-focus-bg: #386bc0;
+    --mdb-btn-focus-color: #fff;
+    --mdb-btn-active-bg: #3566b6;
+    --mdb-btn-active-color: #fff;
+    --mdb-btn-box-shadow-state: 0 8px 9px -4px rgba(56, 107, 192, 0.3), 0 4px 18px 0 rgba(56, 107, 192, 0.2);
+    width: 160px;
+}
 .btn .btn-outline-success .my-2 .my-sm-0 .lupa {
     color: #000000;
     background-color: #000000;

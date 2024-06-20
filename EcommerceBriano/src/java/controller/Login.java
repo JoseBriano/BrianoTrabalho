@@ -58,7 +58,7 @@ public class Login extends HttpServlet {
         }
 
     }
-
+// logica do cadastro de usuario
     protected void user(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         PrintWriter out = response.getWriter();
@@ -82,7 +82,7 @@ public class Login extends HttpServlet {
         }
 
     }
-
+ //logica para login
     protected void logar(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         PrintWriter out = response.getWriter();
@@ -94,22 +94,22 @@ public class Login extends HttpServlet {
             out.println("window.location.href = './Login';");
             out.println("</script>");
         } else {
+            //valida se é usuario ou adm
             usuarioDao.logar(usuario);
-            System.out.println(Usuario.getIdUsuario());
-            if (usuario.getIdUsuario() > 0) {
-                response.sendRedirect("redirect.jsp");
-                out.println("<script type=\"text/javascript\">");
-            out.println("alert('Entrando.');");
-            out.println("</script>");
-            } else {
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('Por favor, faça o cadastro.');");
-                out.println("window.location.href = './Login';");
-                out.println("</script>");
-            }
-
+            System.out.println(usuario.getIdUsuario());
+            if (usuario.getIdUsuario() ==1 ) {
+                response.sendRedirect("./adm");
+                
+                }else if(usuario.getIdUsuario() >0){
+                    response.sendRedirect("redirect.jsp");
+                }else {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("alert('Por favor, faça o cadastro.');");
+                    out.println("window.location.href = './Login';");
+                    out.println("</script>");
+                }
+            } 
         }
-
     }
 
-}
+

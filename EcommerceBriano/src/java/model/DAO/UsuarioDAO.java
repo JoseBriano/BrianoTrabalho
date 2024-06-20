@@ -29,7 +29,7 @@ public class UsuarioDAO {
             PreparedStatement stmt = null;
             ResultSet rs = null;
 
-            stmt = conexao.prepareCall("SELECT * FROM usuario WHERE email = ? AND senha = ?");
+            stmt = conexao.prepareCall("SELECT * FROM Usuario WHERE email = ? AND senha = ?");
             stmt.setString(1, usuario.getEmail());
             stmt.setString(2, usuario.getSenha());
             rs = stmt.executeQuery();
@@ -59,7 +59,7 @@ public class UsuarioDAO {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
             
-            stmt = conexao.prepareCall("INSERT INTO usuario(nome, senha, email, telefone, cpf) VALUES (?,?,?,?,?)");
+            stmt = conexao.prepareCall("INSERT INTO Usuario(nome, senha, email, telefone, cpf) VALUES (?,?,?,?,?)");
             stmt.setString(1, usuario.getNome());
             stmt.setString(2, usuario.getSenha());
             stmt.setString(3, usuario.getEmail());
@@ -82,7 +82,7 @@ public class UsuarioDAO {
             PreparedStatement stmt = null;
             ResultSet rs = null;
 
-            stmt = conexao.prepareStatement("SELECT * FROM usuario");
+            stmt = conexao.prepareStatement("SELECT * FROM Usuario");
             rs = stmt.executeQuery();
             while (rs.next()) {
                 Usuario usu = new Usuario();

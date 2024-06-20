@@ -36,7 +36,6 @@ public class ProdutosDAO {
                 produto.setIdProdutos(rs.getInt("idProdutos"));
                 produto.setNome(rs.getString("nome"));
                 produto.setImagem(rs.getBytes("imagem"));
-                produto.setCategoria(rs.getString("categoria"));
                 produto.setDescricao(rs.getString("descricao"));
                 produto.setTamanho(rs.getString("tamanho"));
                 produto.setPreco(rs.getFloat("preco"));
@@ -57,14 +56,13 @@ public class ProdutosDAO {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareCall("INSERT INTO produtos(nome, imagem, categoria, descricao, tamanho, preco, quantidade) VALUES (?,?,?,?,?,?,?)");
+            stmt = conexao.prepareCall("INSERT INTO Produtos(nome, imagem, descricao, tamanho, preco, quantidade) VALUES (?,?,?,?,?,?)");
             stmt.setString(1, produto.getNome());
             stmt.setBytes(2, produto.getImagem());
-            stmt.setString(3, produto.getCategoria());
-            stmt.setString(4, produto.getDescricao());
-            stmt.setString(5, produto.getTamanho());
-            stmt.setFloat(6, produto.getPreco());
-            stmt.setInt(7, produto.getQuantidade());
+            stmt.setString(3, produto.getDescricao());
+            stmt.setString(4, produto.getTamanho());
+            stmt.setFloat(5, produto.getPreco());
+            stmt.setInt(6, produto.getQuantidade());
             stmt.executeUpdate();
 
             stmt.close();
@@ -93,7 +91,6 @@ public class ProdutosDAO {
                 produto.setIdProdutos(rs.getInt("idProdutos"));
                 produto.setNome(rs.getString("nome"));
                 produto.setImagem(rs.getBytes("imagem"));
-                produto.setCategoria(rs.getString("categoria"));
                 produto.setDescricao(rs.getString("descricao"));
                 produto.setTamanho(rs.getString("tamanho"));
                 produto.setPreco(rs.getFloat("preco"));
@@ -116,7 +113,7 @@ public class ProdutosDAO {
             PreparedStatement stmt = null;
             ResultSet rs = null;
 
-            stmt = conexao.prepareStatement("SELECT * FROM produtos WHERE categoria = ?");
+            stmt = conexao.prepareStatement("SELECT * FROM Produtos WHERE Categoria = ?");
             stmt.setString(1, categoria);
             rs = stmt.executeQuery();
             while (rs.next()) {
@@ -156,7 +153,6 @@ public class ProdutosDAO {
                 prt.setIdProdutos(rs.getInt("idProdutos"));
                 prt.setNome(rs.getString("nome"));
                 prt.setImagem(rs.getBytes("imagem"));
-                prt.setCategoria(rs.getString("categoria"));
                 prt.setDescricao(rs.getString("descricao"));
                 prt.setPreco(rs.getFloat("preco"));
                 prt.setQuantidade(rs.getInt("quantidade"));

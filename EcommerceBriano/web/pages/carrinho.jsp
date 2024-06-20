@@ -58,9 +58,7 @@
                     <li class="nav-item">
                       <a class="nav-link" href="./Feminina">Feminino</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="./CadastroProd">Cadastro</a>
-                    </li>
+                   
                     <style>
                       .nav-link {
                         position: relative;
@@ -124,37 +122,37 @@
                               </div>
                               <hr class="my-4">
 
-                  <div class="row mb-4 d-flex justify-content-between align-items-center">
-                    <div class="col-md-2 col-lg-2 col-xl-2">
-                      <img
-                        src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
-                        class="img-fluid rounded-3" alt="Cotton T-shirt">
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-xl-3">
-                      <h6 class="text-muted">Shirt</h6>
-                      <h6 class="mb-0">Cotton T-shirt</h6>
-                    </div>
-                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                        <i class="fas fa-minus"></i>
-                      </button>
+                              <div class="row mb-4 d-flex justify-content-between align-items-center">
+                                <div class="col-md-2 col-lg-2 col-xl-2">
+                                  <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
+                                    class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-xl-3">
+                                  <h6 class="text-muted">Shirt</h6>
+                                  <h6 class="mb-0">Cotton T-shirt</h6>
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                    <i class="fas fa-minus"></i>
+                                  </button>
 
-                      <input id="form1" min="0" name="quantity" value="1" type="number"
-                        class="form-control form-control-sm" />
+                                  <input id="form1" min="0" name="quantity" value="1" type="number"
+                                    class="form-control form-control-sm" />
 
-                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
-                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                        <i class="fas fa-plus"></i>
-                      </button>
-                    </div>
-                    <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                      <h6 class="mb-0">€ 44.00</h6>
-                    </div>
-                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                      <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
-                    </div>
-                  </div>
+                                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
+                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                    <i class="fas fa-plus"></i>
+                                  </button>
+                                </div>
+                                <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+                                  <h6 class="mb-0">€ 44.00</h6>
+                                </div>
+                                <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                  <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
+                                </div>
+                              </div>
                               <hr class="my-4">
                               <div class="pt-5">
                                 <h6 class="mb-0"><a href="redirect.jsp" class="text-body"><i
@@ -184,6 +182,8 @@
                 </div>
               </div>
             </section>
+            <div class="containerCar">
+            </div>
             <div class="rowPag">
               <div class="col-lg-7 mx-auto">
                 <div class="bg-white rounded-lg shadow-sm p-5">
@@ -264,20 +264,6 @@
               </div>
             </div>
           </main>
-          <footer>
-            <div class="redes">
-              <a href="https://www.instagram.com/coe_briano?igsh=c2JweXZ6NHVnODRt"
-                class="btn btn-outline-succes my-2 my-sm-1" type="submit"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.facebook.com/profile.php?id=100012932593794&locale=pt_BR"
-                class="btn btn-outline-succes my-2 my-sm-1" type="submit"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://wa.me/5543996898525" class="btn btn-outline-succes my-2 my-sm-1" type="submit"><i
-                  class="fa-brands fa-whatsapp"></i></a>
-              <a href="https://www.linkedin.com/in/josé-briano-3a363225a" class="btn btn-outline-succes my-2 my-sm-1"
-                type="submit"><i class="fa-brands fa-linkedin"></i></a>
-
-            </div>
-            &copy; Todos os direitos reservados a Briano
-          </footer>
           <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js type="text/javascript"></script>
           <script src="https://kit.fontawesome.com/1634f6c9c7.js" crossorigin="anonymous"></script>
           <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

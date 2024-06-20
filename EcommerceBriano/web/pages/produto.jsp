@@ -62,9 +62,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./Feminina">Feminino</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./CadastroProd">Cadastro</a>
-                </li>
+
                 <style>
                   .nav-link {
                     position: relative;
@@ -151,15 +149,15 @@
                   data-tamanho="${produtos.tamanho}">
                   <a href="#myModal" class="trigger-btn" data-toggle="modal">comprar</a>
                 </button>
-                
+
                 <div id="myModal" class="modal fade">
                   <div class="modal-dialog modal-confirm">
                     <div class="modal-content">
                       <div class="modal-header">
                         <div class="icon-box">
                           <i class="fa-solid fa-check" style="color: #ffffff;"></i>
-                        </div>				
-                        <h4 class="modal-title">Sucesso!</h4>	
+                        </div>
+                        <h4 class="modal-title">Sucesso!</h4>
                       </div>
                       <div class="modal-body">
                         <p class="text-center">Seu produto foi adicionado ao carrinho.</p>
@@ -169,38 +167,37 @@
                       </div>
                     </div>
                   </div>
-                </div>     
-                </body>
+                </div>
               </div>
-
             </div>
           </c:forEach>
-      </main>
-      <form id="form-comprar" action="enviarc" method="post" enctype="multipart/form-data" style="display: none;">
-        <input type="hidden" name="idProduto" id="idProduto">
-        <input type="hidden" name="descricao" id="descricao">
-        <input type="hidden" name="nomeCarrinho" id="nomeCarrinho">
-        <input type="hidden" name="preco" id="preco">
-        <input type="file" name="imagem" id="imagem">
-        <input type="hidden" name="quantidade" id="quantidade">
-        <input type="hidden" name="tamanho" id="tamanho">
+    </body>
+    </main>
+    <form id="form-comprar" action="enviarc" method="post" enctype="multipart/form-data" style="display: none;">
+      <input type="hidden" name="idProduto" id="idProduto">
+      <input type="hidden" name="descricao" id="descricao">
+      <input type="hidden" name="nomeCarrinho" id="nomeCarrinho">
+      <input type="hidden" name="preco" id="preco">
+      <input type="file" name="imagem" id="imagem">
+      <input type="hidden" name="quantidade" id="quantidade">
+      <input type="hidden" name="tamanho" id="tamanho">
 
-      </form>
-      </div>
-      </main>
-      <script src="https://kit.fontawesome.com/1634f6c9c7.js" crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-      <!-- MDB -->
-      <script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.0/mdb.umd.min.js"></script>
+    </form>
+    </div>
+    </main>
+    <script src="https://kit.fontawesome.com/1634f6c9c7.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <!-- MDB -->
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.0/mdb.umd.min.js"></script>
     </body>
 
     </html>

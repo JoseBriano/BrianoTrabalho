@@ -60,6 +60,14 @@
         <servlet-name>CarrinhoController</servlet-name>
         <servlet-class>controller.CarrinhoController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>adm</servlet-name>
+        <servlet-class>controller.adm</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>perfil</servlet-name>
+        <servlet-class>controller.perfil</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProdutosC</servlet-name>
         <url-pattern>/Produtos</url-pattern>
@@ -99,6 +107,14 @@
     <servlet-mapping>
         <servlet-name>CarrinhoController</servlet-name>
         <url-pattern>/CarrinhoController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adm</servlet-name>
+        <url-pattern>/adm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>perfil</servlet-name>
+        <url-pattern>/perfil</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

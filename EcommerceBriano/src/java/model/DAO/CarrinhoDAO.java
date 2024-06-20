@@ -27,7 +27,7 @@ public class CarrinhoDAO {
             PreparedStatement stmt = null;
             ResultSet rs = null;
 
-            stmt = conexao.prepareCall("SELECT * FROM carrinho");
+            stmt = conexao.prepareCall("SELECT * FROM Carrinho");
             rs = stmt.executeQuery();
             while (rs.next()) {
                 Carrinho cro = new Carrinho();
@@ -38,7 +38,6 @@ public class CarrinhoDAO {
                 cro.setTamanho(rs.getInt("tamanho"));
                 cro.setPrecoCarrinho(rs.getFloat("preco_carrinho"));
                 cro.setQuantidadeCarrinho(rs.getInt("quantidade_carrinho"));
-                cro.setTotal(rs.getFloat("total"));
                 cro.setIdProdutos(rs.getInt("idProdutos"));
                 carrinho.add(cro);
             }
@@ -52,115 +51,21 @@ public class CarrinhoDAO {
         }
         return carrinho;
     }
-
-    public List<Carrinho> leia1() {
-        List<Carrinho> carrinho = new ArrayList<>();
-        try {
-            Connection conexao = Conexao.conectar();
-            PreparedStatement stmt = null;
-            ResultSet rs = null;
-
-            stmt = conexao.prepareCall("SELECT * FROM carrinho");
-            rs = stmt.executeQuery();
-            if (rs.next()) {
-                Carrinho cro = new Carrinho();
-                cro.setTotal(rs.getFloat("total"));
-                carrinho.add(cro);
-            }
-
-            rs.close();
-            stmt.close();
-            conexao.close();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return carrinho;
-    }
-
     public void create(Carrinho carrinho) {
         try {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("INSERT INTO carrinho(nome_carrinho, imagem, descricao_carrinho, preco_carrinho, quantidade_carrinho, idProdutos) SELECT p.nome, p.imagem, p.descricao, p.preco, p.quantidade, ? FROM produtos p WHERE p.idProdutos = ?");
+            stmt = conexao.prepareStatement("INSERT INTO Carrinho(nome_carrinho, imagem, descricao_carrinho, preco_carrinho, quantidade_carrinho, idProdutos) SELECT p.nome, p.imagem, p.descricao, p.preco, p.quantidade, ? FROM Produtos p WHERE p.idProdutos = ?");
             stmt.setInt(1, carrinho.getIdProdutos());
             stmt.setInt(2, carrinho.getIdProdutos());
-
-            int linhasAfetadas = stmt.executeUpdate();
-
-            if (linhasAfetadas > 0) {
-
-                float totalCarrinho = calcularTotalCarrinho();
-
-                stmt = conexao.prepareStatement("UPDATE carrinho SET total = ?");
-                stmt.setFloat(1, totalCarrinho);
-                stmt.executeUpdate();
-
-                System.out.println("Total do Carrinho atualizado com sucesso.");
-            } else {
-                System.out.println("Nenhum produto foi inserido no carrinho.");
-            }
+            stmt.executeUpdate();
 
             stmt.close();
             conexao.close();
-
+            
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-
-    public void delete(int idCarrinho) {
-        try {
-            Connection conexao = Conexao.conectar();
-            PreparedStatement stmt = null;
-
-            stmt = conexao.prepareStatement("DELETE FROM Carrinho WHERE idCarrinho = ?");
-            stmt.setInt(1, idCarrinho);
-
-            int linhasAfetadas = stmt.executeUpdate();
-
-            if (linhasAfetadas > 0) {
-                System.out.println("Produto deletado com sucesso.");
-            } else {
-                System.out.println("Erro ao Deletar produto");
-            }
-
-            stmt.close();
-            conexao.close();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public float calcularTotalCarrinho() {
-        float total = 0.0f;
-
-        try {
-            Connection conexao = Conexao.conectar();
-            PreparedStatement stmt = null;
-            ResultSet rs = null;
-
-            String sql = "SELECT SUM(p.preco * c.quantidade_carrinho) AS total FROM produtos p INNER JOIN carrinho c ON p.idProdutos = c.idProdutos";
-
-            stmt = conexao.prepareStatement(sql);
-
-            rs = stmt.executeQuery();
-
-            if (rs.next()) {
-                total = rs.getFloat("total");
-            }
-
-            rs.close();
-            stmt.close();
-            conexao.close();
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return total;
-    }
-
 }

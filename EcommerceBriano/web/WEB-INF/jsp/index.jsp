@@ -60,9 +60,7 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./Feminina">Feminino</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./CadastroProd">Cadastro</a>
-                </li>
+                
                 <style> .nav-link { position: relative; transition: border-bottom 0.4s; } .nav-link::before { content: ""; position: absolute; bottom: 0; left: 100%; width: 0; height: 2px; background-color: white; transition: width 0.6s; } .nav-link:hover::before { width: 100%; left: 0; } </style>
               </ul>
               <!-- Left links -->
@@ -89,10 +87,7 @@
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuAvatar">
                   <li>
-                    <a class="dropdown-item" href="#">Seu perfil <i class="fa-solid fa-user"></i></a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">Configurações <i class="fa-solid fa-gear"></i></a>
+                    <a class="dropdown-item" href="./perfil">Seu perfil <i class="fa-solid fa-user"></i></a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="./Login">Sair <i class="fa-solid fa-right-from-bracket"></i></a>

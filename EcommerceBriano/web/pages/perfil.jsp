@@ -27,7 +27,7 @@
   <link rel="stylesheet" href="styles/home.css">
   <link rel="icon" href="assets/logo.png">
 
-  <title>Masculino</title>
+  <title>Perfil</title>
 </head>
 
 <body>
@@ -67,12 +67,7 @@
           </ul>
           <!-- Left links -->
         </div>
-        <form class="form-inline my-2 my-lg-0" action="achar" enctype="multipart/form-data" method="post">
-          <input class="form-control mr-sm-2 barra" type="search" placeholder="Pesquisar" aria-label="Pesquisar"
-            name="nome">
-            <style> .btnPesquisa { background-color: transparent; border: none; cursor: pointer; transition: background-color 0.5s; border-radius: 20px; } .btnPesquisa:hover { background-color: rgb(79, 135, 255); } </style>
-            <button class="btnPesquisa" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
+      
         <!-- Collapsible wrapper -->
 
         <!-- Right elements -->
@@ -103,17 +98,8 @@
     </nav>
   </header>
   <main>
-    <h1>Masculino</h1>
-    <div class="container">
-      <c:forEach items="${produtos}" var="produto">
-        <div id="${produto.idProdutos}" class="produto">
-          <h2>${produto.nome}</h2>
-          <img src="data:image/png;base64,${produto.imagemBase64}" alt="${produto.nome}">
-          <p>R$ ${produto.preco}</p>
-          <a href="./ProdutoInd?id=${produto.idProdutos}"><input type="submit" value="Comprar"></a>
-        </div>
-      </c:forEach>
-    </div>
+    <h1>Seu perfil</h1>
+    
   </main>
   <section class="">
     <!-- Footer -->
