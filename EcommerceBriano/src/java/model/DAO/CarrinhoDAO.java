@@ -19,7 +19,29 @@ import model.Bean.Carrinho;
  * @author Senai
  */
 public class CarrinhoDAO {
+    
+    public void create(Carrinho carrinho) {
+        try {
+            Connection conexao = Conexao.conectar();
+            PreparedStatement stmt = null;
 
+            stmt = conexao.prepareStatement("INSERT INTO Carrinho(nome_carrinho, imagem, descricao_carrinho, tamanho, preco_carrinho, quantidade_carrinho, idProdutos)VALUES(?,?,?,?,?,?,?)");
+            stmt.setString(1, carrinho.getNomeCarrinho());
+            stmt.setBytes(2, carrinho.getImagemCarrinho());
+            stmt.setString(3, carrinho.getDescricaoCarrinho());
+            stmt.setInt(4, carrinho.getTamanho());
+            stmt.setFloat(5, carrinho.getPrecoCarrinho());
+            stmt.setInt(6, carrinho.getQuantidadeCarrinho());
+            stmt.setInt(7, carrinho.getIdProdutos());
+            stmt.executeUpdate();
+
+            stmt.close();
+            conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
     public List<Carrinho> leia() {
         List<Carrinho> carrinho = new ArrayList<>();
         try {
@@ -51,21 +73,5 @@ public class CarrinhoDAO {
         }
         return carrinho;
     }
-    public void create(Carrinho carrinho) {
-        try {
-            Connection conexao = Conexao.conectar();
-            PreparedStatement stmt = null;
-
-            stmt = conexao.prepareStatement("INSERT INTO Carrinho(nome_carrinho, imagem, descricao_carrinho, preco_carrinho, quantidade_carrinho, idProdutos) SELECT p.nome, p.imagem, p.descricao, p.preco, p.quantidade, ? FROM Produtos p WHERE p.idProdutos = ?");
-            stmt.setInt(1, carrinho.getIdProdutos());
-            stmt.setInt(2, carrinho.getIdProdutos());
-            stmt.executeUpdate();
-
-            stmt.close();
-            conexao.close();
-            
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+   
 }

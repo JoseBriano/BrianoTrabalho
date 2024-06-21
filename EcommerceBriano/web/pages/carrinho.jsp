@@ -58,7 +58,7 @@
                     <li class="nav-item">
                       <a class="nav-link" href="./Feminina">Feminino</a>
                     </li>
-                   
+
                     <style>
                       .nav-link {
                         position: relative;
@@ -108,7 +108,7 @@
             </nav>
           </header>
           <main>
-            <section class="h-100 h-custom" style="background-color: #d2c9ff;">
+            <section class="h-100 h-custom" style="background-color: #ffffff;">
               <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                   <div class="col-12">
@@ -123,14 +123,9 @@
                               <hr class="my-4">
 
                               <div class="row mb-4 d-flex justify-content-between align-items-center">
-                                <div class="col-md-2 col-lg-2 col-xl-2">
-                                  <img
-                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
-                                    class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                </div>
                                 <div class="col-md-3 col-lg-3 col-xl-3">
-                                  <h6 class="text-muted">Shirt</h6>
-                                  <h6 class="mb-0">Cotton T-shirt</h6>
+                                  <h6 class="text-muted">nome</h6>
+                                  <h6 class="mb-0">Nome Prod.</h6>
                                 </div>
                                 <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
                                   <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link px-2"
@@ -147,7 +142,7 @@
                                   </button>
                                 </div>
                                 <div class="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                  <h6 class="mb-0">€ 44.00</h6>
+                                  <h6 class="mb-0">R$133,00</h6>
                                 </div>
                                 <div class="col-md-1 col-lg-1 col-xl-1 text-end">
                                   <a href="#!" class="text-muted"><i class="fas fa-times"></i></a>
@@ -182,8 +177,7 @@
                 </div>
               </div>
             </section>
-            <div class="containerCar">
-            </div>
+
             <div class="rowPag">
               <div class="col-lg-7 mx-auto">
                 <div class="bg-white rounded-lg shadow-sm p-5">
@@ -248,6 +242,7 @@
                           Confirm </button>
                       </form>
                     </div>
+                    <!---->
                     <!-- End -->
                     <!-- Paypal info -->
                     <div id="nav-tab-paypal" class="tab-pane fade">
@@ -263,6 +258,7 @@
                 </div>
               </div>
             </div>
+            
           </main>
           <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js type="text/javascript"></script>
           <script src="https://kit.fontawesome.com/1634f6c9c7.js" crossorigin="anonymous"></script>

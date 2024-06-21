@@ -181,7 +181,6 @@
       <input type="file" name="imagem" id="imagem">
       <input type="hidden" name="quantidade" id="quantidade">
       <input type="hidden" name="tamanho" id="tamanho">
-
     </form>
     </div>
     </main>

@@ -1,4 +1,4 @@
-document.querySelectorAll('btn-comprar').forEach(btn => {
+document.querySelectorAll('trigger-btn').forEach(btn => {
     btn.addEventListener('click', function() {
         var idProduto = this.getAttribute('data-id');
         var descricao = this.getAttribute('data-descricao');
