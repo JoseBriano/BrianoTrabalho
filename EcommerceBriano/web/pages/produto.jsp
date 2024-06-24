@@ -113,6 +113,7 @@
       </header>
       <main>
         <div class="container">
+          <a class="back" href="redirect.jsp"><i class="fa-solid fa-chevron-left"></i></a>
           <c:forEach items="${produto}" var="produtos">
             <div id="produto_${produtos.idProdutos}" class="produto">
               <h2>${produtos.nome}</h2>

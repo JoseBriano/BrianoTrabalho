@@ -8,6 +8,7 @@
 .bg-body-tertiary {
   --mdb-bg-opacity: 1;
   background-color: #001f58 !important;
+  z-index: 10;
 }
 
 .navbar {
@@ -20,11 +21,23 @@
   background-color: #001f58 !important;
   margin-right:30px ;
 }
-
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-sm, .navbar>.container-md, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #001f58 !important;
+}
+.fa-bars:before, .fa-navicon:before {
+  content: "\f0c9";
+  color: white;
+}
 h2 {
   margin-left: 50px;
 }
-
+.back{
+  font-size: large;
+}
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
   font-size: large;

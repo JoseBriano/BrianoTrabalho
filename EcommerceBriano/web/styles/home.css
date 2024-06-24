@@ -30,6 +30,10 @@ main {
     color: #fff;
     font-size: large;
 }
+.fa-bars:before, .fa-navicon:before {
+    content: "\f0c9";
+    color: white;
+}
 .fa-shopping-cart {
     color: #f3faf6;
     font-size: 25px;
@@ -38,6 +42,13 @@ main {
     color: white;
     font-size: 25px;
 }
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-sm, .navbar>.container-md, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #001f58 !important;
+  }
 
 .dropdown-item {
     display: block;
@@ -133,6 +144,7 @@ img {
 .bg-light {
     background-color: #00369b !important;
     height: 160px;
+    
 }
 .btnPesquisa{
     color: #ffffff;
@@ -299,6 +311,7 @@ h4 {
 .bg-body-tertiary {
     --mdb-bg-opacity: 1;
     background-color: #001f58 !important;
+    z-index: 40;
 }
 .row {
     --mdb-gutter-x: 1.5rem;

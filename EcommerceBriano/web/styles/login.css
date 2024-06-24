@@ -211,7 +211,7 @@ form.sign-up-form {
         height: 100vh;
     }
 }
-@media (max-width:635px) {
+@media (max-width:800px) {
     .container::before {
         display: none;
     }
