@@ -104,7 +104,14 @@
   </header>
   <main>
     <h1>Feminino</h1>
-    
+     <c:forEach items="${produtos}" var="produto" >
+              <div id="${produto.idProdutos}" class="produto">
+                  <h2>${produto.nome}</h2>
+                  <img src="data:image/png;base64,${produto.imagemBase64}"  alt="${produto.nome}">
+                  <p>R$ ${produto.preco}</p>
+                  <a href="./ProdutoController?id=${produto.idProdutos}"><input type="submit" value="comprar"></a>
+              </div>
+          </c:forEach>
   </main>
 
   <section class="">

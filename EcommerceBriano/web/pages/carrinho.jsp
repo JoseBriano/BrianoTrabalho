@@ -157,7 +157,7 @@
                           </div>
                           <div class="col-lg-4 bg-body-tertiary">
                             <div class="p-5">
-                              <h3 class="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                              <h3 class="fw-bold mb-5 mt-2 pt-1">Sumário</h3>
                               <hr class="my-4">
                               <div class="d-flex justify-content-between mb-4">
                                 <h5 class="text-uppercase">itens</h5>
@@ -210,7 +210,7 @@
                         <div class="form-group">
                           <label for="cardNumber">Número do Cartão</label>
                           <div class="input-group">
-                            <input type="text" name="cardNumber" placeholder="ex:1111 1111 1111 1111"
+                            <input id="cartao" type="text" name="cardNumber" placeholder="ex:1111 1111 1111 1111"
                               class="form-control" required>
                             <div class="input-group-append">
                               <span class="input-group-text text-muted">
@@ -258,7 +258,18 @@
                 </div>
               </div>
             </div>
-            
+             <div class="container">
+                    <c:forEach items="${carrinhos}" var="carrinho">
+                        <div id="${carrinho.idProdutos}" class="produto">
+                            <img src="data:image/png;base64,${carrinho.imagemBase64}" alt="${carrinho.nomeCarrinho}">
+                            <h2>${carrinho.nomeCarrinho}</h2>
+                            <p id="p1" class="preco">R$ ${carrinho.precoCarrinho}</p>
+                            <p id="p2">x ${carrinho.quantidadeCarrinho}</p>
+                            <button type="submit" class="lixo"><i class="fa-solid fa-trash"></i></button>
+                            <button type="submit" class="comprar"><i class="fa-solid fa-check"></i></button>
+                        </div>
+                    </c:forEach>
+                </div>
           </main>
           <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js type="text/javascript"></script>
           <script src="https://kit.fontawesome.com/1634f6c9c7.js" crossorigin="anonymous"></script>
@@ -271,7 +282,7 @@
           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
             integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
             crossorigin="anonymous"></script>
-          <script src="js.car.js"></script>
+          <script src="js.mask.js"></script>
           <!-- MDB -->
           <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.0/mdb.umd.min.js"></script>

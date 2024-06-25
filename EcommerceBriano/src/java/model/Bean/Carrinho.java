@@ -8,10 +8,7 @@ package model.Bean;
 import java.sql.Blob;
 import java.util.Base64;
 
-/**
- *
- * @author consa
- */
+
 public class Carrinho {
     private int idCarrinho;
     private String nomeCarrinho;

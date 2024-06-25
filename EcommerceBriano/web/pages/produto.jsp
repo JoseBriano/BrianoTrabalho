@@ -91,6 +91,9 @@
 
             <!-- Collapsible wrapper -->
             <!-- Avatar -->
+            <a class="link-secondary me-3" href="./CarrinhoController">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
             <div class="dropdown">
               <a data-mdb-dropdown-init class="dropdown-toggle d-flex align-items-center hidden-arrow" href="#"
                 id="navbarDropdownMenuAvatar" role="button" aria-expanded="false">
@@ -113,7 +116,7 @@
       </header>
       <main>
         <div class="container">
-          <a class="back" href="redirect.jsp"><i class="fa-solid fa-chevron-left"></i></a>
+          <a class="back" href="redirect.jsp"><i class="fa-solid fa-chevron-left"> voltar</i></a>
           <c:forEach items="${produto}" var="produtos">
             <div id="produto_${produtos.idProdutos}" class="produto">
               <h2>${produtos.nome}</h2>

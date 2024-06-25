@@ -5,10 +5,6 @@
  */
 package model.Bean;
 
-/**
- *
- * @author Senai
- */
 public class Usuario {
     private static int idUsuario;
     private String nome;

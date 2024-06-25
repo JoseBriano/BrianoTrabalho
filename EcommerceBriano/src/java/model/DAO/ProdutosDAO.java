@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package model.DAO;
 
-import conexao.Conexao;
+import conexao.Conexao; 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,24 +11,25 @@ import java.util.List;
 import model.Bean.Produtos;
 
 
-/**
- *
- * @author Senai
- */
 public class ProdutosDAO {
-     public List<Produtos> ler() {
-        List<Produtos> produtos = new ArrayList();
+    
+    // Função que lê e retorna todos os produtos do banco de dados
+    public List<Produtos> ler() {
+        List<Produtos> produtos = new ArrayList(); // cria uma lista para armazenar os produtos
         
         try {
-            Connection conexao = Conexao.conectar();
+            Connection conexao = Conexao.conectar(); // conexão com o banco
             PreparedStatement stmt = null;
             ResultSet rs = null;
             
+            // faz a consulta sql para buscar todos os produtos
             stmt = conexao.prepareStatement("SELECT * FROM Produtos");
             rs = stmt.executeQuery();
             
+            // le os resultados da consulta e cria objetos Produtos para cada produto encontrado
             while(rs.next()) {
                 Produtos produto = new Produtos();
+                //define os atributos do produto com base nos dados do banco de dados
                 produto.setIdProdutos(rs.getInt("idProdutos"));
                 produto.setNome(rs.getString("nome"));
                 produto.setImagem(rs.getBytes("imagem"));
@@ -41,7 +38,7 @@ public class ProdutosDAO {
                 produto.setPreco(rs.getFloat("preco"));
                 produto.setQuantidade(rs.getInt("quantidade"));
                 
-                produtos.add(produto);
+                produtos.add(produto); // adiciona o produto à lista de produtos do banco de dados
             }
             rs.close();
             stmt.close();
@@ -49,13 +46,17 @@ public class ProdutosDAO {
         } catch(SQLException e) {
             e.printStackTrace();
         }
-        return produtos;
+        return produtos; 
     }
-     public void create(Produtos produto) {
+
+    
+    public void create(Produtos produto) {
+        //função pra criar um novo produto
         try {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
 
+            // cadastrao os dados do novo produto na tabela Produtos
             stmt = conexao.prepareCall("INSERT INTO Produtos(nome, imagem, descricao, tamanho, preco, quantidade) VALUES (?,?,?,?,?,?)");
             stmt.setString(1, produto.getNome());
             stmt.setBytes(2, produto.getImagem());
@@ -67,25 +68,29 @@ public class ProdutosDAO {
 
             stmt.close();
             conexao.close();
-            System.out.println("deu certo");
+            System.out.println("Operação de inserção bem-sucedida");
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
     }
-     public List<Produtos> ler1( int id) {
+
+    // Função para pesquisar um produto pelo seu id 
+    public List<Produtos> ler1(int id) {
         List<Produtos> produtos = new ArrayList();
-        
+
         try {
+            // Estabelece conexão com o banco de dados
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
             ResultSet rs = null;
             
+           
             stmt = conexao.prepareStatement("SELECT * FROM Produtos WHERE idProdutos = ?");
             stmt.setInt(1,id);
             rs = stmt.executeQuery();
             
-            
+            // le o resultado da consulta e cria um objeto Produtos para o produto encontrado
             while(rs.next()) {
                 Produtos produto = new Produtos();
                 produto.setIdProdutos(rs.getInt("idProdutos"));
@@ -106,7 +111,9 @@ public class ProdutosDAO {
         }
         return produtos;
     }
-     public List<Produtos> leia2(String categoria) {
+
+    // função para ler e retornar produtos de uma determinada categoria(não concluida)
+    public List<Produtos> leia2(String categoria) {
         List<Produtos> produto = new ArrayList<>();
         try {
             Connection conexao = Conexao.conectar();
@@ -138,7 +145,9 @@ public class ProdutosDAO {
         }
         return produto;
     }
-      public List<Produtos> leia3(String pesquisar) {
+
+    // Função para buscar e retornar produtos com base em um termo de pesquisa
+    public List<Produtos> leia3(String pesquisar) {
         List<Produtos> produto = new ArrayList<>();
         try {
             Connection conexao = Conexao.conectar();

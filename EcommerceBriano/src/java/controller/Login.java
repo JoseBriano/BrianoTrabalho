@@ -17,10 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import model.Bean.Usuario;
 import model.DAO.UsuarioDAO;
 
-/**
- *
- * @author Senai
- */
+
 @WebServlet(urlPatterns = {"/criar", "/logar"})
 @MultipartConfig
 public class Login extends HttpServlet {

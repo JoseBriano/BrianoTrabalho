@@ -14,10 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 import model.Bean.Carrinho;
 
-/**
- *
- * @author Senai
- */
 public class CarrinhoDAO {
     
     public void create(Carrinho carrinho) {

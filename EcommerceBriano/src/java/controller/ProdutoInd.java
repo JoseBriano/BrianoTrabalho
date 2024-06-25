@@ -23,10 +23,7 @@ import model.DAO.ProdutosDAO;
 import model.Bean.Produtos;
 import model.Bean.Carrinho;
 
-/**
- *
- * @author Senai
- */
+
 @WebServlet(urlPatterns = "/enviarc")
 @MultipartConfig
 public class ProdutoInd extends HttpServlet {

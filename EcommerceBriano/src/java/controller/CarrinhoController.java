@@ -31,10 +31,11 @@ public class CarrinhoController extends HttpServlet {
         CarrinhoDAO produto = new CarrinhoDAO();
         List<Carrinho> carrinhos = produto.leia();
         request.setAttribute("carrinhos", carrinhos);
+        List<Carrinho> carrinhos1 = produto.leia();
+        request.setAttribute("carrinhos1", carrinhos1);
         String url = "/pages/carrinho.jsp";
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

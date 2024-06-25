@@ -21,6 +21,15 @@
   background-color: #001f58 !important;
   margin-right:30px ;
 }
+.fa-chevron-left:before {
+  content: "\f053";
+  color: #000000 !important;
+  font-size: smaller
+}
+a .back{
+  color: #000000;
+  text-decoration: none;
+}
 .navbar>.container, .navbar>.container-fluid, .navbar>.container-sm, .navbar>.container-md, .navbar>.container-lg, .navbar>.container-xl, .navbar>.container-xxl {
   display: flex;
   flex-wrap: inherit;

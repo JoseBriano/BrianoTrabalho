@@ -19,18 +19,19 @@
         </head>
 
         <body>
-             <!-- Tela de login antiga do Luan -->
-             
+
+            <div class="back"> <a href="redirect.jsp"><i class="fa-solid fa-chevron-left">voltar</i></a></div>
+            </style>
             <div class="container">
                 <div class="signin-signup">
-                   
+
                     <form action="logar" class="sign-in-form" enctype="multipart/form-data" method="get">
                         <h2 class="title">Logar</h2>
                         <div class="input-field">
                             <i class="fas fa-user"></i>
                             <input type="email" placeholder="Email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                                 name="email">
-                               
+
                         </div>
                         <div class="input-field">
                             <i class="fas fa-lock"></i>
@@ -38,8 +39,9 @@
                         </div>
                         <input type="submit" value="Login" class="btn">
 
-                       
-                        <p class="account-text">Não possui uma conta?? <a href="#" id="sign-up-btn2">Cadastrar-se</a></p>
+
+                        <p class="account-text">Não possui uma conta?? <a href="#" id="sign-up-btn2">Cadastrar-se</a>
+                        </p>
                     </form>
                     <form action="criar" class="sign-up-form" enctype="multipart/form-data" method="post">
                         <h2 class="title">Cadastro</h2>
@@ -79,14 +81,15 @@
                             <p>Então faça o seu login e entre novamente!</p>
                             <button class="btn" id="sign-in-btn">Logar</button>
                         </div>
-                    
+
                     </div>
                     <div class="panel right-panel">
                         <div class="content">
-                            <img src="assets/logomaior.png" alt="" class="image">
+
                             <h3>Você e novo por aqui?</h3>
                             <p>Crie sua conta e faca parte da melhor loja online de tenis</p>
                             <button class="btn" id="sign-up-btn">Cadastrar</button>
+                            
                         </div>
 
                     </div>

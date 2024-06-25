@@ -7,10 +7,6 @@ package model.Bean;
 
 import java.util.Base64;
 
-/**
- *
- * @author Senai
- */
 public class Produtos {
     private int idProdutos;
     

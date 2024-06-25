@@ -8,14 +8,11 @@ package conexao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-/**
- *
- * @author Senai
- */
+
 public class Conexao {
-    private static final String url = "jdbc:mysql://db4free.net:3306/projeto_briano1?useSSL=false";
-    private static final String user = "j_briano";
-    private static final String senha = "andersonjose1";
+    private static final String url = "jdbc:mysql://localhost:3306/projeto_web1?useSSL=false";
+    private static final String user = "root";
+    private static final String senha = "";
     private static final String driver = "com.mysql.cj.jdbc.Driver";
     
     public static Connection conectar() {

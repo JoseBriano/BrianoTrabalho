@@ -18,10 +18,6 @@ import javax.servlet.http.HttpServletResponse;
 import model.DAO.ProdutosDAO;
 import model.Bean.Produtos;
 
-/**
- *
- * @author Senai
- */
 @WebServlet(urlPatterns = "/achar")
 @MultipartConfig
 public class ProdutosC extends HttpServlet {
