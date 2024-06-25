@@ -89,7 +89,6 @@
                             <h3>Você e novo por aqui?</h3>
                             <p>Crie sua conta e faca parte da melhor loja online de tenis</p>
                             <button class="btn" id="sign-up-btn">Cadastrar</button>
-                            
                         </div>
 
                     </div>
